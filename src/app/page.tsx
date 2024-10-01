@@ -1,14 +1,20 @@
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import Link from 'next/link';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
-      <h1>Hello World</h1>
-      <div className="p-32 flex flex-col gap-4">
-        <Input label="Name" id="name" error="something went wrong" />
-        <Button>Click Me</Button>
-      </div>
-    </>
+    <main className="h-screen grid place-items-center">
+      <Card>
+        <CardHeader>
+          <CardHeader className="text-4xl font-bold">SCROOGE</CardHeader>
+        </CardHeader>
+        <CardContent>
+          <Button className="w-full" asChild>
+            <Link href="/login">Login</Link>
+          </Button>
+        </CardContent>
+      </Card>
+    </main>
   );
 }
