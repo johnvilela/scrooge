@@ -11,6 +11,7 @@ export default function OnBoardingLayout({
     'https://picsum.photos/id/155/1632/1088',
     'https://picsum.photos/id/165/1000/666',
   ];
+  const imgRandomIndex = Math.floor(Math.random() * imgs.length);
 
   return (
     <main className="h-screen flex bg-muted/40">
@@ -18,7 +19,7 @@ export default function OnBoardingLayout({
         {children}
       </div>
       <div className="flex-1 relative">
-        <Image src={imgs[1]} alt="Onboarding" fill />
+        <Image src={imgs[imgRandomIndex]} alt="Onboarding" fill />
       </div>
     </main>
   );
